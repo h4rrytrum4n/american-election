@@ -18,7 +18,12 @@ Phase 3:
 Bestimmung der Datenabhängigkeit sowie dessen visuelle Darstellung.
 
 Das Team in der alphabetischen Reihenfolge:
+
 Adrian Gruszczynski (Informatik Bachelor)
+
 Florian Brinkmeyer (Informatik Lehramt)
+
 Pit Ronk (Mathematik Bachelor)
+
 Remi Toudic (Mathematik Master)
+
