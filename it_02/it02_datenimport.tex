@@ -8,6 +8,7 @@
 \usepackage{setspace}
 \usepackage{parskip}
 \usepackage{listings}
+\usepackage{hyperref}
 \title{Datenbanksysteme\\
 			 Projekt Iteration 2: Datenimport}
 \author{Adrian Gruszczynski\\ 
@@ -21,17 +22,84 @@
 \section*{Aufgabe 1: Datenbankschema erstellen}
 \lstinputlisting[language=sql, frame=single, breaklines, numbers=left
 ]{src/a1.sql}
-%Hier noch github Link
+Private repository: \\
+\url{https://gitlab.spline.inf.fu-berlin.de/h4rrytrum4n/DBS_PR/blob/master/it_02/src/a1.sql}
 \newpage
 \section*{Aufgabe 2: Datenbereinigung}
 \lstinputlisting[language=python, frame=single, breaklines, numbers=left]{src/clean_data.py}
-%hier noch github link
+Private repository: \\
+\url{https://gitlab.spline.inf.fu-berlin.de/h4rrytrum4n/DBS_PR/blob/master/it_02/src/clean_data.py}
 \newpage
 \section*{Aufgabe 3: Daten import}
 \lstinputlisting[language=python, frame=single, breaklines, numbers=left]{src/import_data.py}
-%Again github
+Private repository: \\
+\url{https://gitlab.spline.inf.fu-berlin.de/h4rrytrum4n/DBS_PR/blob/master/it_02/src/import_data.py}
 
-\section*{Aufgabe 4: Relationales Modell}
+\section*{Aufgabe 4: Webserver}
+Für die Webanwendung haben wir uns entschieden Django Framework zu benutzen. 
+
+Django ist ein Python basiertes Webframework das einem Model-View-Present Schema folgt.
+Es verfügt über eine integrierte Schnittstelle für die Anbindung von mehreren Datenbanken u.a PostgreSQL.
+Das Webframework an sich läuft auf einem Apache Webserver.
+
+Sobald unsere Datenbank eingerichtet wurde, könenn wir mit Installation von Django anfangen. Für verbesserte Flexibilität werden wir die Einrichtung von Django und dessen Abhängigkeiten in einem virtual enviroment einrichten.
+
+Zunächst werden folgende packages installiert:
+\begin{lstlisting}[language=sh, frame=single]
+sudo apt install python-pip python-dev libpq-dev
+sudo pip install virtualenv
+\end{lstlisting}
+Als nächstes wird ein Projektordner erstellt:
+\begin{lstlisting}[language=sh, frame=single]
+mkdir django-postgresql
+cd django-postgresql
+\end{lstlisting}
+Nun wird ein virtual enviroment für unseres Django Projekt angelegt und aktiviert:
+\begin{lstlisting}[language=sh, frame=single]
+virtualenv django-postgresql
+source django-postgresql/bin/activate
+\end{lstlisting}
+Sobald unser virtual enviroment aktiv ist, kan mann mit der Installation von $psycopg2$ anfangen. Das Paket ermöglicht uns den Aufbau einer Verbindung zu unserer Datenbank.
+\begin{lstlisting}[language=sh, frame=single]
+pip install django psycopg2
+\end{lstlisting}
+Als nächstes kann das Projekt angelegt werden:
+\begin{lstlisting}[language=sh, frame=single]
+django-admin.py startproject django-postgresql .
+\end{lstlisting}
+Wenn unser Projekt erfolgreich angelegt wurde, kann man mit der Konfiguration der Datenbank beginnen. Dafür öffnen wir die folgende Konfigurationsdatei und suchen nach dem $DATABASES$ Abschnitt:
+\begin{lstlisting}[language=sh, frame=single]
+vim django-postgresql/settings.py
+\end{lstlisting}
+Die ursprüngliche Konfiguration muss folgendermaßen angepasst werden:
+\begin{lstlisting}[language=sh, frame=single]
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'election',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+\end{lstlisting}
+Wenn die Konfiguration der Datenbankverbindung erfolgreich gelaufen ist kann man jetzt die bestehende Relationen aus unserer Election Datenbank als Modell importieren:
+\begin{lstlisting}[language=sh, frame=single]
+python manage.py inspectdb > models.py
+pthon manage.py makemigrations
+python manage.py migrate
+\end{lstlisting}
+Nachdem die Struktur für die Datenbank aufgebaut wurde kann man ein administratives Konto erstellen:
+\begin{lstlisting}[language=sh, frame=single]
+python manage.py createsuperuser
+\end{lstlisting}
+Zum Schluss starten wir unseren Webserver mit folgendem Befehl:
+\begin{lstlisting}[language=sh, frame=single]
+python manage.py runserver localhost:8888
+\end{lstlisting}
+
+
 
 
 \end{document}
