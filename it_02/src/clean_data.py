@@ -2,7 +2,7 @@ import csv
 import re
 
 def cleanData():
-    tweetID, hashCount, ahshWritten = 0, 0, 0;
+    tweetID, hashCount, ahshWritten = 1, 0, 0;
     hashtags = []
 
     #Open files for read/write
