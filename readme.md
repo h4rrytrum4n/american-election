@@ -27,7 +27,7 @@ Das Team in der alphabetischen Reihenfolge:
 
 * Remi Toudic (Mathematik Master)
 
-# Getting started
+## Getting started
 Clone Repo
 ```bash
 git clone https://gitlab.spline.inf.fu-berlin.de/h4rrytrum4n/DBS_PR
@@ -47,7 +47,7 @@ pyvenv venv
 source venv/bin/activate
 pip3 install psycopg2
 ```
-### Database setup:
+## Database setup:
 
 ```bash
 # start Postgres
@@ -64,7 +64,7 @@ CREATETABLE tweet (tweet id serial primary key, handle varchar(20) NOT NULL, bod
 time timestamp NOT NULL, retweet count int , favorite count int);
 CREATETABLE hashtag(hash id serial primary key, tweet id int , text varchar(100) NOT NULL) ;
 ```
-# Import data 
+### Import data 
 ```bash
 # go to it02/src directory
 cd it02/src
@@ -73,7 +73,7 @@ python clean_data.py
 python import_data.py
 ```
 
-# do the migrations and make sure you have sourced the env variables
+### do the migrations and make sure you have sourced the env variables
 ```bash
 source .env
 ./manage.py migrate
