@@ -77,7 +77,6 @@ python import_data.py
 ```bash
 source .env
 ./manage.py migrate
-
 ./manage.py runserver
 ```
 
