@@ -74,10 +74,10 @@ python import_data.py
 ```
 
 # do the migrations and make sure you have sourced the env variables
+```bash
 source .env
 ./manage.py migrate
-```
-```bash
+
 ./manage.py runserver
 ```
 
