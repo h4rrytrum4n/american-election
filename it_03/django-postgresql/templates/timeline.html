@@ -1,0 +1,35 @@
+{%extends 'base.html'%}
+{% load staticfiles%}
+{%block nav-timeline%}class="active"{%endblock%}
+{%block content%}
+<div id="myDiv"></div>
+<script>
+var json_string = unescape("{{d | safe | escapejs}}");
+var data = JSON.parse(json_string);
+var layout = {
+  paper_bgcolor: 'rgba(0,0,0,0)',
+  plot_bgcolor: 'rgba(0,0,0,0)',
+  title: 'US Election Hashtags/Occurences',
+  xaxis: {tickfont: {
+      size: 14, 
+      color: 'rgb(107, 107, 107)'
+    }}, 
+  yaxis: {
+    title: 'Occurences',
+    titlefont: {
+      size: 16, 
+      color: 'rgb(107, 107, 107)'
+    }, 
+    tickfont: {
+      size: 14, 
+      color: "rgb(107, 107, 107)"
+    }
+  }, 
+  barmode: 'group', 
+  bargap: 0.15, 
+  bargroupgap: 0.1
+};
+
+Plotly.newPlot('myDiv', data, layout);
+</script>
+{%endblock%}

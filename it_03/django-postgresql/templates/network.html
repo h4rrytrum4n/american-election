@@ -1,0 +1,54 @@
+{%extends 'base.html'%}
+{% load staticfiles%}
+{%block nav-network%}class="active"{%endblock%}
+{%block content%}
+<div id="container"></div>
+<script type="text/javascript">
+var s = new sigma('container')
+var i,
+    s,
+    g = {
+      nodes: [],
+      edges: []
+    };
+ {%for n in c.nodes %}
+  g.nodes.push({
+    id: '{{n.id}}',
+    label: '{{n.label}}',
+    x: Math.random(),
+    y: Math.random(),
+    size: Math.random(),
+    color: '#666'
+  });
+  document.write('{{n.text}}')
+  {%endfor%}
+  {%for e in c.edges%}
+  g.edges.push({
+    id: '{{e.id}}',
+    source: '{{e.source}}',
+    target: '{{e.target}}',
+    size: Math.random(),
+    type: 'line',
+    color: '#ccc',
+    hover_color: '#000'
+  });
+  {%endfor%}
+s = new sigma({
+  graph: g,
+  renderer: {
+    container: document.getElementById('container'),
+    type: 'canvas'
+  },
+  settings: {
+    doubleClickEnabled: true,
+    minEdgeSize: 0.5,
+    maxEdgeSize: 4,
+    enableEdgeHovering: true,
+    edgeHoverColor: 'edge',
+    defaultEdgeHoverColor: '#000',
+    edgeHoverSizeRatio: 1,
+    edgeHoverExtremities: true,
+  }
+});    
+</script>
+{%endblock%}

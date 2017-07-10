@@ -1,0 +1,44 @@
+/*Some custom css*/
+.navbar {
+   background-color: transparent;
+   background: transparent;
+   border-color: transparent;
+}
+.navbar li { color: #000 }
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Set the fixed height of the footer here */
+  background-color: rgba(0,0,0,0.06);
+}
+.network div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+div.starter-template {
+  margin: auto;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  width: 50%;
+  word-wrap: break-word;
+}
+p.lead {
+  text-align: center;
+}
+html { 
+  background: url("../img/e45f54e2cc5516e2210c34453db5ab6e.jpg")
+  no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+body {
+  padding-top: 5rem;
+  background: transparent;
+  margin: 0;
+}
+
+
