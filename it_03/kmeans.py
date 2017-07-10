@@ -13,10 +13,12 @@ import DBS_metric as DBS
 ##############################################################################
 # ########################## initialisierung ################################
 
-def intinialiserung(df, number_of_cluster):
+
 # input1=   dataframe 'datax'  which all information 
 # input2 =  number of clusters ( centers  . it could be done also random 
 # output =  dataframe  which the ' random centers '  to stat KMeams 
+
+def intinialiserung(df, number_of_cluster):
 
     number_of_cluster= 3
     num_of_tweet= DBS.datax.shape[0] 
@@ -46,11 +48,12 @@ def intinialiserung(df, number_of_cluster):
 # 1) distance zu cluster jeder cluster 1 
 
 # find nearest center of a tweet
-def find_cluster(Tweet_id,centers):
 # input1= Tweet_id or DF_index ( int )
 # input2= cordinates of the centers - in a dataframe  with same column names 
 #         as in functin initialisierung.  ex: cluster_init       
 #output = dataframe with all the dimensions     
+def find_cluster(Tweet_id,centers):
+
     number_of_cluster= centers.shape[0]
     distance_to_cluster=list()
     
@@ -96,7 +99,7 @@ def compute_centers(data_with_label,number_of_cluster):
              
     # BoW FOR EACH GROUP 
     BoW_meam=[group_list[i]['Tweet_bagOfWords'].sum(axis=0)/by_label.size()[i] for i in range(0,number_of_cluster)] 
-    BoW__meam= [round(BoW_meam[i]) for i in range (0,number_of_cluster) ]       
+    BoW__meam= [BoW_meam[i] for i in range (0,number_of_cluster) ]       
     '''        
     # DATUM MEAN FOR EACH GROUP     
     TIME=group_list[i]['time']
@@ -123,17 +126,17 @@ def compute_centers(data_with_label,number_of_cluster):
     
     return updated_center
 
-
+#%%
 ###############################################################################
 #                                   K_MEANS  ALGO 
 #
-################################################################################
+###############################################################################
 number_of_cluster=3
 cluster_init= intinialiserung(DBS.datax,3)
 
-DBS.datax.drop('body',inplace=True, axis=1) 
+#DBS.datax.drop('body',inplace=True, axis=1) 
 listOfCenters=list()    
-for i in range(0,5): 
+for i in range(0,20): 
     # first round
     if i== 0:
         labelled_data=write_label(DBS.datax,cluster_init)
@@ -146,6 +149,8 @@ for i in range(0,5):
         new_centers=   compute_centers(labelled_data,number_of_cluster)
         new_centers=  pd.concat([new_centers, cluster_init.time], axis=1)
         listOfCenters.append(new_centers)
+        
+    
 
 listOfCenters=listOfCenters
 results=pd.DataFrame(listOfCenters)
@@ -153,5 +158,3 @@ results.to_json('results5.js')
 results.to_csv('results5.csv')
 #results.to_excel('results')
 print('done ') 
-
-

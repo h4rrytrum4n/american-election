@@ -1,21 +1,81 @@
 ,0
 0,"   Tweet_bagOfWords  retweet_count           handle                 time
-0                 4           3601  realDonaldTrump  2016-07-12 21:10:03
-1                 4           1524   HillaryClinton  2016-05-20 23:45:42
-2                 4           9414  realDonaldTrump  2016-05-24 18:49:32"
+0          3.835616            663   HillaryClinton  2016-09-19 16:32:32
+1          4.064560           1118   HillaryClinton  2016-04-10 03:02:23
+2          3.840258           5362  realDonaldTrump  2016-09-14 02:57:51"
 1,"   Tweet_bagOfWords  retweet_count           handle                 time
-0                 4           4159  realDonaldTrump  2016-07-12 21:10:03
-1                 4           1441   HillaryClinton  2016-05-20 23:45:42
-2                 4          12092  realDonaldTrump  2016-05-24 18:49:32"
+0          3.826825            665   HillaryClinton  2016-09-19 16:32:32
+1          3.876221           1902   HillaryClinton  2016-04-10 03:02:23
+2          3.865177           7703  realDonaldTrump  2016-09-14 02:57:51"
 2,"   Tweet_bagOfWords  retweet_count           handle                 time
-0                 4           4811  realDonaldTrump  2016-07-12 21:10:03
-1                 4           1532   HillaryClinton  2016-05-20 23:45:42
-2                 4          14525  realDonaldTrump  2016-05-24 18:49:32"
+0          3.936989            886   HillaryClinton  2016-09-19 16:32:32
+1          3.755227           2715   HillaryClinton  2016-04-10 03:02:23
+2          4.011142           9744  realDonaldTrump  2016-09-14 02:57:51"
 3,"   Tweet_bagOfWords  retweet_count           handle                 time
-0                 4           5445  realDonaldTrump  2016-07-12 21:10:03
-1                 4           1663   HillaryClinton  2016-05-20 23:45:42
-2                 4          16885  realDonaldTrump  2016-05-24 18:49:32"
+0          3.944103           1127   HillaryClinton  2016-09-19 16:32:32
+1          3.692595           3532  realDonaldTrump  2016-04-10 03:02:23
+2          4.159091          11703  realDonaldTrump  2016-09-14 02:57:51"
 4,"   Tweet_bagOfWords  retweet_count           handle                 time
-0                 4           6115  realDonaldTrump  2016-07-12 21:10:03
-1                 4           1799   HillaryClinton  2016-05-20 23:45:42
-2                 4          19981  realDonaldTrump  2016-05-24 18:49:32"
+0          3.911233           1346   HillaryClinton  2016-09-19 16:32:32
+1          3.689489           4295  realDonaldTrump  2016-04-10 03:02:23
+2          4.281321          13648  realDonaldTrump  2016-09-14 02:57:51"
+5,"   Tweet_bagOfWords  retweet_count           handle                 time
+0          3.865809           1543   HillaryClinton  2016-09-19 16:32:32
+1          3.766761           5028  realDonaldTrump  2016-04-10 03:02:23
+2          4.257911          15763  realDonaldTrump  2016-09-14 02:57:51"
+6,"   Tweet_bagOfWords  retweet_count           handle                 time
+0          3.866726           1700   HillaryClinton  2016-09-19 16:32:32
+1          3.788235           5704  realDonaldTrump  2016-04-10 03:02:23
+2          4.266219          18282  realDonaldTrump  2016-09-14 02:57:51"
+7,"   Tweet_bagOfWords  retweet_count           handle                 time
+0          3.844378           1843   HillaryClinton  2016-09-19 16:32:32
+1          3.836312           6340  realDonaldTrump  2016-04-10 03:02:23
+2          4.323899          21221  realDonaldTrump  2016-09-14 02:57:51"
+8,"   Tweet_bagOfWords  retweet_count           handle                 time
+0          3.821928           1973   HillaryClinton  2016-09-19 16:32:32
+1          3.901416           6979  realDonaldTrump  2016-04-10 03:02:23
+2          4.354839          25135  realDonaldTrump  2016-09-14 02:57:51"
+9,"   Tweet_bagOfWords  retweet_count           handle                 time
+0          3.818901           2105   HillaryClinton  2016-09-19 16:32:32
+1          3.934771           7633  realDonaldTrump  2016-04-10 03:02:23
+2          4.371622          29957  realDonaldTrump  2016-09-14 02:57:51"
+10,"   Tweet_bagOfWords  retweet_count           handle                 time
+0          3.804263           2218   HillaryClinton  2016-09-19 16:32:32
+1          4.005402           8268  realDonaldTrump  2016-04-10 03:02:23
+2          4.278351          36714  realDonaldTrump  2016-09-14 02:57:51"
+11,"   Tweet_bagOfWords  retweet_count           handle                 time
+0          3.790159           2324   HillaryClinton  2016-09-19 16:32:32
+1          4.088831           8898  realDonaldTrump  2016-04-10 03:02:23
+2          3.952381          45385  realDonaldTrump  2016-09-14 02:57:51"
+12,"   Tweet_bagOfWords  retweet_count           handle                 time
+0          3.791729           2429   HillaryClinton  2016-09-19 16:32:32
+1          4.115495           9545  realDonaldTrump  2016-04-10 03:02:23
+2          3.951220          56410  realDonaldTrump  2016-09-14 02:57:51"
+13,"   Tweet_bagOfWords  retweet_count           handle                 time
+0          3.795346           2515   HillaryClinton  2016-09-19 16:32:32
+1          4.128483          10210  realDonaldTrump  2016-04-10 03:02:23
+2          4.047619          81892   HillaryClinton  2016-09-14 02:57:51"
+14,"   Tweet_bagOfWords  retweet_count           handle                 time
+0          3.790339           2599   HillaryClinton  2016-09-19 16:32:32
+1          4.182814          10819  realDonaldTrump  2016-04-10 03:02:23
+2          3.833333         113980   HillaryClinton  2016-09-14 02:57:51"
+15,"   Tweet_bagOfWords  retweet_count           handle                 time
+0          3.792123           2677   HillaryClinton  2016-09-19 16:32:32
+1          4.212454          11412  realDonaldTrump  2016-04-10 03:02:23
+2          3.285714         156627   HillaryClinton  2016-09-14 02:57:51"
+16,"   Tweet_bagOfWords  retweet_count           handle                 time
+0          3.797966           2747   HillaryClinton  2016-09-19 16:32:32
+1          4.218038          11989  realDonaldTrump  2016-04-10 03:02:23
+2          2.750000         217485   HillaryClinton  2016-09-14 02:57:51"
+17,"   Tweet_bagOfWords  retweet_count           handle                 time
+0          3.792035           2820   HillaryClinton  2016-09-19 16:32:32
+1          4.286486          12517  realDonaldTrump  2016-04-10 03:02:23
+2          3.333333         259424  realDonaldTrump  2016-09-14 02:57:51"
+18,"   Tweet_bagOfWords  retweet_count           handle                 time
+0          3.796233           2872   HillaryClinton  2016-09-19 16:32:32
+1          4.294931          12977  realDonaldTrump  2016-04-10 03:02:23
+2          2.500000         328727   HillaryClinton  2016-09-14 02:57:51"
+19,"   Tweet_bagOfWords  retweet_count           handle                 time
+0          3.798722           2932   HillaryClinton  2016-09-19 16:32:32
+1          4.318408          13587  realDonaldTrump  2016-04-10 03:02:23
+2          1.000000         490180   HillaryClinton  2016-09-14 02:57:51"
