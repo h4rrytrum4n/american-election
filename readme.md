@@ -27,6 +27,11 @@ Das Team in der alphabetischen Reihenfolge:
 
 * Remi Toudic (Mathematik Master)
 
+## Webapplication
+
+![alt text](https://raw.githubusercontent.com/h4rrytrum4n/american-election/master/hashtagnetwork.png?raw=true "Hashtag network")
+![alt text](https://raw.githubusercontent.com/h4rrytrum4n/american-election/master/timeline.png?raw=true "Hashtag/Occurences timeline")
+
 ## Getting started
 Clone Repo
 ```bash
